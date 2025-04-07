@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.calendar-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.calendar-grid-header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.header-day {
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #e9ecef;
+    border-radius: 3px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.day {
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    position: relative;
+}
+
+.special-day {
+    font-weight: bold;
+}
+
+.day:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1;
+    transition: opacity 0.3s;
+}
+
+.calendar-footer {
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+.winter { background-color: #f0f7ff; }
+.spring { background-color: #e6ffe6; }
+.summer { background-color: #fff3e6; }
+.autumn { background-color: #fff0e6; }
+
+.new-year { background-color: #ffe6e6; color: #800000; }
+.spring-dawn { background-color: #e6ffe6; color: #006600; border: 2px solid #006600; }
+.summer-rising { background-color: #fff3e6; color: #cc5200; border: 2px solid #cc5200; }
+.mid-year { background-color: #e6f2ff; color: #004080; }
+.autumn-falling { background-color: #fff0e6; color: #804000; border: 2px solid #804000; }
+.winter-dusk { background-color: #e6f0ff; color: #003366; border: 2px solid #003366; }
